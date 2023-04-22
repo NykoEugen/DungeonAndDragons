@@ -19,7 +19,7 @@ class Hero:
         self.damage = 10
         self.defence = 5
 
-        self.ability = None
+        self.ability = "None"
         print(f"Hero {self.hero_name} created")
 
     def set_race(self):
