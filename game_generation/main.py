@@ -1,18 +1,18 @@
 from game_generation.dice import Dice
-from game_generation.hero import Hero
-from game_generation.hero_action import HeroAction
+from game_generation.Hero.hero import Hero
+from game_generation.Hero.hero_action import HeroAction
 
 
 def main():
-    name = input("Create hero name: ")
-    hero1 = Hero(name)
-    hero1.set_race()
-    hero1.set_class()
-    all_inf = hero1.get_hero()
-    action_hero1 = HeroAction(all_inf)
-    dice = Dice()
-    hero1_dice = dice.trow_dice("d6", "2")
-    print(hero1_dice)
+    hero1 = Hero()
+    print(f"Stage to set atribut")
+    dice1 = Dice()
+    throw_result = dice1.throw_dice("d6", "3")
+    hero1_attr = hero1.set_atribut(throw_result)
+    print(hero1_attr)
+
+
+
 
 
 
