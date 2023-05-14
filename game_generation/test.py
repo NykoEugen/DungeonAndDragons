@@ -29,7 +29,7 @@
 #
 #
 # abc = func("fox")
-import random
-level = 3
-reward_xp = round(random.randint(1, 3) * level * 1.1, 1)
-print(reward_xp)
+# import random
+# level = 3
+# reward_xp = round(random.randint(1, 3) * level * 1.1, 1)
+# print(reward_xp)

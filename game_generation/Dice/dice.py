@@ -2,7 +2,8 @@ import random
 
 
 class Dice:
-    def throw_dice(self, type_dice, number_of_dice):
+    @staticmethod
+    def throw_dice(type_dice, number_of_dice):
         dice_t = list(type_dice)
         dice_t.remove("d")
         dice = int("".join(dice_t))
@@ -21,6 +22,5 @@ class Dice:
         return result
 
 
-# dice = Dice()
-# result = dice.trow_dice("d6", "2")
+# result = Dice.throw_dice("d6", "2")
 # print(result)
