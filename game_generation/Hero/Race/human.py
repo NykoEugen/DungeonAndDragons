@@ -1,4 +1,4 @@
-from game_generation.Hero.Factory.race import Race
+from game_generation.Hero.FactoryAbstract.race import Race
 
 
 class Human(Race):

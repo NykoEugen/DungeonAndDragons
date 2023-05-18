@@ -1,14 +1,14 @@
-from game_generation.Hero.Factory.abstractunit import AbstractUnit
+from game_generation.Hero.FactoryAbstract.abstract_unit import AbstractUnit
 
 
-class Unit(AbstractUnit):
+class UnitHalfling(AbstractUnit):
     def __init__(self, name):
         self.name = name
         super().__init__(self.name)
         self.level = 1
 
         self.strength = 0
-        self.dexterity = 0
+        self.dexterity = 2
         self.constitution = 0
         self.intelligence = 0
         self.wisdom = 0
@@ -45,11 +45,10 @@ class Unit(AbstractUnit):
 
     def hero_attr(self):
         hero_attributs = {"strength": self.strength,
-                               "dexterity": self.dexterity,
-                               "constitution": self.constitution,
-                               "intelligence": self.intelligence,
-                               "wisdom": self.wisdom,
-                               "charisma": self.charisma
-                               }
+                          "dexterity": self.dexterity,
+                          "constitution": self.constitution,
+                          "intelligence": self.intelligence,
+                          "wisdom": self.wisdom,
+                          "charisma": self.charisma
+                          }
         return hero_attributs
-

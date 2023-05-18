@@ -33,3 +33,9 @@
 # level = 3
 # reward_xp = round(random.randint(1, 3) * level * 1.1, 1)
 # print(reward_xp)
+race = 'elf'
+hero_class = 'wizard'
+a = race.lower().capitalize()
+b = hero_class.lower().capitalize()
+factory_name = a + b
+print(factory_name)
