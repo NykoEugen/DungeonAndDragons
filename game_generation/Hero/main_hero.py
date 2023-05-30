@@ -19,31 +19,7 @@ from game_generation.Hero.FactoryUnit.human_ranger import HumanRanger
 from game_generation.Hero.FactoryUnit.human_sorcerer import HumanSorcerer
 from game_generation.Hero.FactoryUnit.human_warrior import HumanWarrior
 from game_generation.Hero.FactoryUnit.human_wizard import HumanWizard
-
-
-class HeroConstructor:
-    def __init__(self, factory: HeroAbstractFactory):
-        self._hero_factory = factory
-
-    def create_hero(self):
-        self.unit = self._hero_factory.getHero()
-        self.race = self._hero_factory.getRace()
-        self.hero_class = self._hero_factory.getClass()
-        self.unit.create()
-        self.race.create()
-        self.hero_class.create()
-
-    def set_attr(self, points):
-        return self.unit.set_attr(points)
-
-    def hero_attr(self):
-        return self.unit.hero_attr()
-
-    def make_damage(self):
-        return self.hero_class.make_damage()
-
-    def race_skill_1(self):
-        return self.race.race_skill_1()
+from game_generation.Hero.hero_constructor import HeroConstructor
 
 
 def create_hero(name, race, hero_class) -> HeroAbstractFactory:
